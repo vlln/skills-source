@@ -21,6 +21,8 @@ skit install skills-source/<skill-name>
 | [`remote-exec`](https://github.com/vlln/remote-exec-skill) | Run repeated shell commands on remote machines over SSH with tmux-backed persistent state |
 | [`mineru-api`](https://github.com/vlln/mineru-api-skill) | Parse PDFs via remote MinerU API — extract markdown, tables, and formulas from documents |
 | [`pdffigures2`](https://github.com/vlln/pdffigures-mcp-server) | Extract figures, tables, and captions from scholarly PDFs using PDFFigures 2.0 (Allen AI) |
+| [`make-skill`](https://github.com/vlln/skit) | Create or revise Agent Skills repositories with precise SKILL.md frontmatter and validation |
+| [`search-skills`](https://github.com/vlln/skit) | Find, evaluate, and install agent skills with the skit CLI |
 
 ## Adding a skill
 

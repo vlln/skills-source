@@ -98,6 +98,34 @@
       },
       "path": "skills/pdffigures2",
       "agents": ["universal"]
+    },
+    "make-skill": {
+      "name": "make-skill",
+      "description": "Create or revise Agent Skills repositories with one or more skills under skills/, precise SKILL.md frontmatter, concise instructions, validation checks, and skit-friendly metadata.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/skit",
+        "url": "https://github.com/vlln/skit.git",
+        "ref": "main",
+        "subpath": "skills/make-skill",
+        "skill": "make-skill"
+      },
+      "path": "skills/make-skill",
+      "agents": ["universal"]
+    },
+    "search-skills": {
+      "name": "search-skills",
+      "description": "Find, evaluate, and install agent skills with the skit CLI. Use when the user asks to find a skill, search installable skills, add a capability, install a skill, list installed skills, update skills, remove skills, or check active links.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/skit",
+        "url": "https://github.com/vlln/skit.git",
+        "ref": "main",
+        "subpath": "skills/search-skills",
+        "skill": "search-skills"
+      },
+      "path": "skills/search-skills",
+      "agents": ["universal"]
     }
   }
 }
