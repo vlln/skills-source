@@ -1,11 +1,19 @@
 # skills-source
 
-Skit skill source — a curated collection of bioinformatics and DevOps skills installable via [skit](https://github.com/vlln/skit).
+A curated collection of agent skills — bioinformatics, document processing, DevOps, and more — maintained by [vlln](https://github.com/vlln).
 
-## Usage
+## Install with skit (recommended)
+
+[skit](https://github.com/vlln/skit) is a fast, reproducible skill manager for agent ecosystems. Install it then add this source:
 
 ```bash
+# Install skit
+go install github.com/vlln/skit/cmd/skit@latest
+
+# Add this source
 skit source add skills-source https://raw.githubusercontent.com/vlln/skills-source/main/skit.json
+
+# Search and install
 skit search <keyword>
 skit install skills-source/<skill-name>
 ```
@@ -25,6 +33,28 @@ skit install skills-source/<skill-name>
 | [`pdffigures2`](https://github.com/vlln/pdffigures-mcp-server) | Extract figures, tables, and captions from scholarly PDFs using PDFFigures 2.0 (Allen AI) |
 | [`make-skill`](https://github.com/vlln/skit) | Create or revise Agent Skills repositories with precise SKILL.md frontmatter and validation |
 | [`search-skills`](https://github.com/vlln/skit) | Find, evaluate, and install agent skills with the skit CLI |
+
+## Alternative install methods
+
+### skills.sh
+
+```bash
+skills add https://raw.githubusercontent.com/vlln/skills-source/main/skit.json
+skills install <skill-name>
+```
+
+### Agent self-install
+
+Give your agent a skill URL directly — it can read the `skit.json` catalog and install the skill from its source repository on its own:
+
+> Install the skill from `https://github.com/vlln/bio-skills/tree/main/skills/biocontainers`
+
+### Install from source
+
+```bash
+git clone https://github.com/vlln/bio-skills.git
+skit install ./bio-skills/skills/biocontainers
+```
 
 ## Adding a skill
 
