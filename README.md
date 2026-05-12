@@ -15,6 +15,8 @@ skit install skills-source/<skill-name>
 | Skill | Description |
 |---|---|
 | [`biocontainers`](https://github.com/vlln/bio-skills) | Search BioContainers, inspect container metadata, resolve quay.io image tags via GA4GH TRS API |
+| [`zenodo`](https://github.com/vlln/bio-skills) | Search, download, and manage authenticated Zenodo deposits via the Zenodo API |
+| [`bio-reproducer`](https://github.com/vlln/bio-skills) | Guide agents through reproducible bioinformatics paper reproduction with Nextflow |
 | [`paperutils`](https://github.com/vlln/paperutils) | Fetch paper dossiers, search papers, explain dataset accessions via Crossref, Europe PMC, PubMed, arXiv |
 | [`quay`](https://github.com/vlln/quay-skill) | Search Quay.io repositories, list image tags, resolve pullable container references |
 | [`image-mirror-skill`](https://github.com/vlln/mip) | Accelerate Docker/OCI image pulls with registry-aware mirror rewrite via mip CLI |

@@ -15,6 +15,34 @@
       "path": "skills/biocontainers",
       "agents": ["universal"]
     },
+    "zenodo": {
+      "name": "zenodo",
+      "description": "Search and download Zenodo records, and manage authenticated Zenodo deposits through the API, including drafts, metadata, files, deletion, and publishing.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/bio-skills",
+        "url": "https://github.com/vlln/bio-skills.git",
+        "ref": "main",
+        "subpath": "skills/zenodo",
+        "skill": "zenodo"
+      },
+      "path": "skills/zenodo",
+      "agents": ["universal"]
+    },
+    "bio-reproducer": {
+      "name": "bio-reproducer",
+      "description": "Guide agents through reproducible bioinformatics paper reproduction using a logged multi-phase workspace, async long-running tasks, staged reports, data manifests, Nextflow orchestration, and validation.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/bio-skills",
+        "url": "https://github.com/vlln/bio-skills.git",
+        "ref": "main",
+        "subpath": "skills/bio-reproducer",
+        "skill": "bio-reproducer"
+      },
+      "path": "skills/bio-reproducer",
+      "agents": ["universal"]
+    },
     "paperutils": {
       "name": "paperutils",
       "description": "Run paperutils CLI commands (get, find, explain) to fetch paper dossiers, search for papers, or explain dataset accessions for biomedical and CS papers. Use when the user asks about papers, DOIs, PMIDs, arXiv IDs, datasets, or accessions — anything that requires querying Crossref, Europe PMC, PubMed, arXiv, bioRxiv, ENA, or NCBI.",
