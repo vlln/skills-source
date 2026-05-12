@@ -14,11 +14,13 @@ skit install skills-source/<skill-name>
 
 | Skill | Description |
 |---|---|
-| `biocontainers` | Search BioContainers, inspect container metadata, resolve quay.io image tags via GA4GH TRS API |
-| `paperutils` | Fetch paper dossiers, search papers, explain dataset accessions via Crossref, Europe PMC, PubMed, arXiv |
-| `quay` | Search Quay.io repositories, list image tags, resolve pullable container references |
-| `image-mirror-skill` | Accelerate Docker/OCI image pulls with registry-aware mirror rewrite via mip CLI |
-| `remote-exec` | Run repeated shell commands on remote machines over SSH with tmux-backed persistent state |
+| [`biocontainers`](https://github.com/vlln/bio-skills) | Search BioContainers, inspect container metadata, resolve quay.io image tags via GA4GH TRS API |
+| [`paperutils`](https://github.com/vlln/paperutils) | Fetch paper dossiers, search papers, explain dataset accessions via Crossref, Europe PMC, PubMed, arXiv |
+| [`quay`](https://github.com/vlln/quay-skill) | Search Quay.io repositories, list image tags, resolve pullable container references |
+| [`image-mirror-skill`](https://github.com/vlln/mip) | Accelerate Docker/OCI image pulls with registry-aware mirror rewrite via mip CLI |
+| [`remote-exec`](https://github.com/vlln/remote-exec-skill) | Run repeated shell commands on remote machines over SSH with tmux-backed persistent state |
+| [`mineru-api`](https://github.com/vlln/mineru-api-skill) | Parse PDFs via remote MinerU API — extract markdown, tables, and formulas from documents |
+| [`pdffigures2`](https://github.com/vlln/pdffigures-mcp-server) | Extract figures, tables, and captions from scholarly PDFs using PDFFigures 2.0 (Allen AI) |
 
 ## Adding a skill
 

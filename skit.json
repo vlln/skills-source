@@ -13,9 +13,7 @@
         "skill": "biocontainers"
       },
       "path": "skills/biocontainers",
-      "agents": [
-        "universal"
-      ]
+      "agents": ["universal"]
     },
     "paperutils": {
       "name": "paperutils",
@@ -29,9 +27,7 @@
         "skill": "paperutils"
       },
       "path": "skills/paperutils",
-      "agents": [
-        "universal"
-      ]
+      "agents": ["universal"]
     },
     "quay": {
       "name": "quay",
@@ -45,9 +41,7 @@
         "skill": "quay"
       },
       "path": "skills/quay",
-      "agents": [
-        "universal"
-      ]
+      "agents": ["universal"]
     },
     "image-mirror-skill": {
       "name": "image-mirror-skill",
@@ -61,9 +55,7 @@
         "skill": "image-mirror-skill"
       },
       "path": "skills/image-mirror-skill",
-      "agents": [
-        "universal"
-      ]
+      "agents": ["universal"]
     },
     "remote-exec": {
       "name": "remote-exec",
@@ -77,9 +69,35 @@
         "skill": "remote-exec"
       },
       "path": "skills/remote-exec",
-      "agents": [
-        "universal"
-      ]
+      "agents": ["universal"]
+    },
+    "mineru-api": {
+      "name": "mineru-api",
+      "description": "Parse PDF documents via a remote MinerU API server using a CLI wrapper that mirrors the `mineru` interface. Covers single-file and batch PDF parsing, async submission, and health checks. Use when the user wants to extract markdown, tables, and formulas from PDFs through an existing MinerU deployment.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/mineru-api-skill",
+        "url": "https://github.com/vlln/mineru-api-skill.git",
+        "ref": "master",
+        "subpath": "skills/mineru-api",
+        "skill": "mineru-api"
+      },
+      "path": "skills/mineru-api",
+      "agents": ["universal"]
+    },
+    "pdffigures2": {
+      "name": "pdffigures2",
+      "description": "Extract figures, tables, and captions from scholarly PDFs using PDFFigures 2.0 (Allen AI). Use this skill when the user needs to extract visual elements (figures, charts, tables) from a PDF — especially academic papers — and wants structured metadata plus rendered PNG images.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/pdffigures-mcp-server",
+        "url": "https://github.com/vlln/pdffigures-mcp-server.git",
+        "ref": "main",
+        "subpath": "skills/pdffigures2",
+        "skill": "pdffigures2"
+      },
+      "path": "skills/pdffigures2",
+      "agents": ["universal"]
     }
   }
 }
