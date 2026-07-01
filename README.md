@@ -1,15 +1,25 @@
-# skills-source
+<h1 align="center">skills-source</h1>
 
-A curated collection of agent skills — bioinformatics, document processing, DevOps, and more — maintained by [vlln](https://github.com/vlln).
+<p align="center">
+  <strong>A curated collection of 18 agent skills.</strong><br/>
+  Bioinformatics, document processing, DevOps, agent orchestration, and more —<br/>
+  one source, one command, all skills.
+</p>
 
-## Install with skit (recommended)
+<p align="center">
+  <a href="https://github.com/vlln/skills-source/stargazers"><img src="https://badgen.net/github/stars/vlln/skills-source?label=%E2%98%85" alt="GitHub stars" /></a>
+  <img src="https://badgen.net/badge/license/MIT/blue" alt="MIT" />
+  <img src="https://badgen.net/badge/spec/Agent%20Skills/8257D0" alt="Agent Skills spec" />
+  <img src="https://badgen.net/badge/skills/18/44CC11" alt="18 skills" />
+</p>
 
-[skit](https://github.com/vlln/skit) is a fast, reproducible skill manager for agent ecosystems. Install it then add this source:
+---
+
+## Installation
+
+### [skit](https://github.com/vlln/skit) (Recommended)
 
 ```bash
-# Install skit
-curl -fsSL https://raw.githubusercontent.com/vlln/skit/main/install.sh | sh
-
 # Add this source
 skit source add skills-source https://raw.githubusercontent.com/vlln/skills-source/main/skit.json
 
@@ -18,7 +28,21 @@ skit search <keyword>
 skit install skills-source/<skill-name>
 ```
 
-## Available skills
+### [skill.sh](https://github.com/vercel-labs/skills)
+
+```bash
+npx skills add vlln/skills-source
+```
+
+### Manually
+
+Give your agent a skill URL directly:
+
+> Install the skill from `https://github.com/vlln/bio-skills/tree/main/skills/biocontainers`
+
+---
+
+## Skills
 
 ### Agent & Workflow
 
@@ -62,20 +86,7 @@ skit install skills-source/<skill-name>
 | [`agent-gui`](https://github.com/vlln/agent-gui) | Generate interactive HTML UIs — dashboards, task boards, forms, charts, CRUD interfaces, mini-games, data explorers |
 | [`grab`](https://github.com/vlln/grab) | Fetch web resources through TLS fingerprint rotation and browser fallback — bypass Cloudflare and CDN blocking |
 
-## Alternative install methods
-
-### skills.sh
-
-```bash
-skills add https://raw.githubusercontent.com/vlln/skills-source/main/skit.json
-skills install <skill-name>
-```
-
-### Agent self-install
-
-Give your agent a skill URL directly — it can read the `skit.json` catalog and install the skill from its source repository on its own:
-
-> Install the skill from `https://github.com/vlln/bio-skills/tree/main/skills/biocontainers`
+---
 
 ## Adding a skill
 
@@ -83,3 +94,7 @@ Give your agent a skill URL directly — it can read the `skit.json` catalog and
 2. Export the manifest: `skit export`
 3. Merge the new entry into this repo's `skit.json`
 4. Commit and push
+
+## License
+
+MIT
