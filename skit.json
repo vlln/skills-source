@@ -1,37 +1,37 @@
 {
   "schema": "skit.manifest/v1",
   "skills": {
-    "biocontainers": {
-      "name": "biocontainers",
-      "description": "Search BioContainers, inspect bioinformatics container metadata, list available versions, and resolve full quay.io image tags through the GA4GH TRS API.",
+    "agent-gui": {
+      "name": "agent-gui",
+      "description": "Use this skill when you need to generate interactive HTML UIs that users can manipulate in a browser — dashboards, task boards, forms, charts, CRUD interfaces, mini-games, data explorers, or multi-step workflows.",
       "source": {
         "type": "github",
-        "locator": "vlln/bio-skills",
-        "url": "https://github.com/vlln/bio-skills.git",
-        "ref": "main",
-        "subpath": "skills/biocontainers",
-        "skill": "biocontainers"
+        "locator": "vlln/agent-gui",
+        "url": "https://github.com/vlln/agent-gui.git",
+        "ref": "master",
+        "subpath": "skills/agent-gui",
+        "skill": "agent-gui"
       },
-      "path": "skills/biocontainers",
+      "path": "skills/agent-gui",
       "agents": ["universal"]
     },
-    "zenodo": {
-      "name": "zenodo",
-      "description": "Search and download Zenodo records, and manage authenticated Zenodo deposits through the API, including drafts, metadata, files, deletion, and publishing.",
+    "autofigure": {
+      "name": "autofigure",
+      "description": "Use this skill when creating publication-ready scientific SVG figures for flowcharts, architecture diagrams, conceptual schematics, and methodology overviews. This skill is for non-data figures only — no bar/line/scatter charts, no heatmaps, no ROC curves, no plots derived from numerical data. Use when the user asks to create a figure, diagram, or illustration for a paper, survey, blog post, or textbook.",
       "source": {
         "type": "github",
-        "locator": "vlln/bio-skills",
-        "url": "https://github.com/vlln/bio-skills.git",
+        "locator": "vlln/autofigure-skill",
+        "url": "https://github.com/vlln/autofigure-skill.git",
         "ref": "main",
-        "subpath": "skills/zenodo",
-        "skill": "zenodo"
+        "subpath": "skills/autofigure",
+        "skill": "autofigure"
       },
-      "path": "skills/zenodo",
+      "path": "skills/autofigure",
       "agents": ["universal"]
     },
     "bio-reproducer": {
       "name": "bio-reproducer",
-      "description": "Guide agents through reproducible bioinformatics paper reproduction using a logged multi-phase workspace, async long-running tasks, staged reports, data manifests, Nextflow orchestration, and validation.",
+      "description": "引导 agent 通过分阶段报告、数据清单、异步长时间任务、Nextflow 编排和验证，在项目工作区内完成可复现的生物信息学论文复现。",
       "source": {
         "type": "github",
         "locator": "vlln/bio-skills",
@@ -43,37 +43,51 @@
       "path": "skills/bio-reproducer",
       "agents": ["universal"]
     },
-    "paperutils": {
-      "name": "paperutils",
-      "description": "Run paperutils CLI commands (get, find, explain) to fetch paper dossiers, search for papers, or explain dataset accessions for biomedical and CS papers. Use when the user asks about papers, DOIs, PMIDs, arXiv IDs, datasets, or accessions — anything that requires querying Crossref, Europe PMC, PubMed, arXiv, bioRxiv, ENA, or NCBI.",
+    "biocontainers": {
+      "name": "biocontainers",
+      "description": "Use this skill when searching for bioinformatics containers, inspecting BioContainers metadata, listing available tool versions, or resolving full quay.io image tags through the GA4GH TRS API.",
       "source": {
         "type": "github",
-        "locator": "vlln/paperutils",
-        "url": "https://github.com/vlln/paperutils.git",
-        "ref": "master",
-        "subpath": "skills/paperutils",
-        "skill": "paperutils"
+        "locator": "vlln/bio-skills",
+        "url": "https://github.com/vlln/bio-skills.git",
+        "ref": "main",
+        "subpath": "skills/biocontainers",
+        "skill": "biocontainers"
       },
-      "path": "skills/paperutils",
+      "path": "skills/biocontainers",
       "agents": ["universal"]
     },
-    "quay": {
-      "name": "quay",
-      "description": "Search Quay.io repositories, list image tags, inspect tag metadata, and resolve pullable quay.io image references for public or token-visible containers.",
+    "clashctl-usage": {
+      "name": "clashctl-usage",
+      "description": "当用户需要了解或使用 clashctl 工具管理 Linux 代理时使用此 skill。覆盖代理开关、节点切换、订阅管理、规则配置和网络诊断等场景。",
       "source": {
         "type": "github",
-        "locator": "vlln/quay-skill",
-        "url": "https://github.com/vlln/quay-skill.git",
+        "locator": "vlln/clashskill",
+        "url": "https://github.com/vlln/clashskill.git",
         "ref": "main",
-        "subpath": "skills/quay",
-        "skill": "quay"
+        "subpath": ".agents/skills/clashctl-usage",
+        "skill": "clashctl-usage"
       },
-      "path": "skills/quay",
+      "path": "skills/clashctl-usage",
+      "agents": ["universal"]
+    },
+    "grab": {
+      "name": "grab",
+      "description": "Use this skill when standard HTTP clients (curl, requests, fetch) get blocked by Cloudflare or other TLS-fingerprinting CDNs — especially on academic publisher sites, CDN-protected APIs, or JS-heavy pages that require browser rendering.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/grab",
+        "url": "https://github.com/vlln/grab.git",
+        "ref": "master",
+        "subpath": "skills/grab",
+        "skill": "grab"
+      },
+      "path": "skills/grab",
       "agents": ["universal"]
     },
     "image-mirror-skill": {
       "name": "image-mirror-skill",
-      "description": "Use the mip CLI to accelerate and troubleshoot Docker/OCI image pulls with registry-aware mirror rewrite, probe, pull, and configuration workflows.",
+      "description": "Use this skill when you need to accelerate or troubleshoot Docker/OCI image pulls that are slow, unstable, or blocked, using registry-aware mirror rewriting, probing, and pulling.",
       "source": {
         "type": "github",
         "locator": "vlln/mip",
@@ -83,48 +97,6 @@
         "skill": "image-mirror-skill"
       },
       "path": "skills/image-mirror-skill",
-      "agents": ["universal"]
-    },
-    "remote-exec": {
-      "name": "remote-exec",
-      "description": "Use this skill when the user needs to run repeated shell commands on a remote machine over SSH, including connection checks, stdin scripts, and optional tmux-backed persistent state. Do not use it for local-only commands or workflows that require storing passwords.",
-      "source": {
-        "type": "github",
-        "locator": "vlln/remote-exec-skill",
-        "url": "https://github.com/vlln/remote-exec-skill.git",
-        "ref": "main",
-        "subpath": "skills/remote-exec",
-        "skill": "remote-exec"
-      },
-      "path": "skills/remote-exec",
-      "agents": ["universal"]
-    },
-    "mineru-api": {
-      "name": "mineru-api",
-      "description": "Parse PDF documents via a remote MinerU API server using a CLI wrapper that mirrors the `mineru` interface. Covers single-file and batch PDF parsing, async submission, and health checks. Use when the user wants to extract markdown, tables, and formulas from PDFs through an existing MinerU deployment.",
-      "source": {
-        "type": "github",
-        "locator": "vlln/mineru-api-skill",
-        "url": "https://github.com/vlln/mineru-api-skill.git",
-        "ref": "master",
-        "subpath": "skills/mineru-api",
-        "skill": "mineru-api"
-      },
-      "path": "skills/mineru-api",
-      "agents": ["universal"]
-    },
-    "pdffigures2": {
-      "name": "pdffigures2",
-      "description": "Extract figures, tables, and captions from scholarly PDFs using PDFFigures 2.0 (Allen AI). Use this skill when the user needs to extract visual elements (figures, charts, tables) from a PDF — especially academic papers — and wants structured metadata plus rendered PNG images.",
-      "source": {
-        "type": "github",
-        "locator": "vlln/pdffigures-mcp-server",
-        "url": "https://github.com/vlln/pdffigures-mcp-server.git",
-        "ref": "main",
-        "subpath": "skills/pdffigures2",
-        "skill": "pdffigures2"
-      },
-      "path": "skills/pdffigures2",
       "agents": ["universal"]
     },
     "make-skill": {
@@ -141,6 +113,76 @@
       "path": "skills/make-skill",
       "agents": ["universal"]
     },
+    "mineru-api": {
+      "name": "mineru-api",
+      "description": "Use this skill when parsing PDF documents through a remote MinerU API server. Covers single-file and batch PDF parsing, async submission, and health checks. Use when the user wants to extract markdown, tables, and formulas from PDFs.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/mineru-api-skill",
+        "url": "https://github.com/vlln/mineru-api-skill.git",
+        "ref": "master",
+        "subpath": "skills/mineru-api",
+        "skill": "mineru-api"
+      },
+      "path": "skills/mineru-api",
+      "agents": ["universal"]
+    },
+    "paperutils": {
+      "name": "paperutils",
+      "description": "Use this skill when the user asks about papers, DOIs, PMIDs, arXiv IDs, datasets, or accessions — anything that requires querying Crossref, Europe PMC, PubMed, arXiv, bioRxiv, ENA, or NCBI.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/paperutils",
+        "url": "https://github.com/vlln/paperutils.git",
+        "ref": "master",
+        "subpath": "skills/paperutils",
+        "skill": "paperutils"
+      },
+      "path": "skills/paperutils",
+      "agents": ["universal"]
+    },
+    "pdffigures2": {
+      "name": "pdffigures2",
+      "description": "Extract figures, tables, and captions from scholarly PDFs using PDFFigures 2.0 (Allen AI). Use this skill when the user needs to extract visual elements (figures, charts, tables) from a PDF — especially academic papers — and wants structured metadata plus rendered PNG images.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/pdffigures-mcp-server",
+        "url": "https://github.com/vlln/pdffigures-mcp-server.git",
+        "ref": "main",
+        "subpath": "skills/pdffigures2",
+        "skill": "pdffigures2"
+      },
+      "path": "skills/pdffigures2",
+      "agents": ["universal"]
+    },
+    "quay": {
+      "name": "quay",
+      "description": "Use this skill when you need to search Quay.io repositories, list image tags, inspect tag metadata, or resolve pullable quay.io image references for public or token-visible containers.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/quay-skill",
+        "url": "https://github.com/vlln/quay-skill.git",
+        "ref": "main",
+        "subpath": "skills/quay",
+        "skill": "quay"
+      },
+      "path": "skills/quay",
+      "agents": ["universal"]
+    },
+    "remote-exec": {
+      "name": "remote-exec",
+      "description": "Use this skill when the user needs to run repeated shell commands on a remote machine over SSH, including connection checks, stdin scripts, and optional tmux-backed persistent state. Do not use it for local-only commands or workflows that require storing passwords.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/remote-exec-skill",
+        "url": "https://github.com/vlln/remote-exec-skill.git",
+        "ref": "main",
+        "subpath": "skills/remote-exec",
+        "skill": "remote-exec"
+      },
+      "path": "skills/remote-exec",
+      "agents": ["universal"]
+    },
     "search-skills": {
       "name": "search-skills",
       "description": "Find, evaluate, and install agent skills with the skit CLI. Use when the user asks to find a skill, search installable skills, add a capability, install a skill, list installed skills, update skills, remove skills, or check active links.",
@@ -153,6 +195,48 @@
         "skill": "search-skills"
       },
       "path": "skills/search-skills",
+      "agents": ["universal"]
+    },
+    "subagents": {
+      "name": "subagents",
+      "description": "Use this skill when dispatching tasks to named agent sessions across multiple backends. Define agents as Markdown files with YAML frontmatter, run tasks on them, list agents and sessions, and check status. Use for parallel execution or long-running sessions.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/subagents-skill",
+        "url": "https://github.com/vlln/subagents-skill.git",
+        "ref": "main",
+        "subpath": "skills/subagents",
+        "skill": "subagents"
+      },
+      "path": "skills/subagents",
+      "agents": ["universal"]
+    },
+    "workflow": {
+      "name": "workflow",
+      "description": "Use this skill when orchestrating multiple AI agents with parallel, pipeline, or phase-based workflows. Dispatch sub-tasks to agents, run them concurrently or in pipelines, and synthesize results.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/subagents-skill",
+        "url": "https://github.com/vlln/subagents-skill.git",
+        "ref": "main",
+        "subpath": "skills/workflow",
+        "skill": "workflow"
+      },
+      "path": "skills/workflow",
+      "agents": ["universal"]
+    },
+    "zenodo": {
+      "name": "zenodo",
+      "description": "Use this skill when you need to search or download Zenodo records, or manage authenticated Zenodo deposits — including creating drafts, editing metadata, uploading files, deleting drafts, and publishing research outputs.",
+      "source": {
+        "type": "github",
+        "locator": "vlln/bio-skills",
+        "url": "https://github.com/vlln/bio-skills.git",
+        "ref": "main",
+        "subpath": "skills/zenodo",
+        "skill": "zenodo"
+      },
+      "path": "skills/zenodo",
       "agents": ["universal"]
     }
   }
