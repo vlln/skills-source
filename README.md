@@ -28,12 +28,6 @@ skit search <keyword>
 skit install skills-source/<skill-name>
 ```
 
-### [skill.sh](https://github.com/vercel-labs/skills)
-
-```bash
-npx skills add vlln/skills-source
-```
-
 ### Manually
 
 Give your agent a skill URL directly:
