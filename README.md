@@ -34,7 +34,7 @@ skit install skills-source/<skill-name>
 | Skill | Description |
 |---|---|
 | [`biocontainers`](https://github.com/vlln/bio-skills) | Search BioContainers, inspect container metadata, resolve quay.io image tags via GA4GH TRS API |
-| [`bio-reproducer`](https://github.com/vlln/bio-skills) | 引导 agent 通过分阶段报告、Nextflow 编排和验证，完成可复现的生物信息学论文复现 |
+| [`bio-reproducer`](https://github.com/vlln/bio-skills) | Guide agents through reproducible bioinformatics paper reproduction with phased reports, Nextflow orchestration, and validation |
 | [`paperutils`](https://github.com/vlln/paperutils) | Fetch paper dossiers, search papers, explain dataset accessions via Crossref, Europe PMC, PubMed, arXiv |
 | [`pdffigures2`](https://github.com/vlln/pdffigures-mcp-server) | Extract figures, tables, and captions from scholarly PDFs using PDFFigures 2.0 (Allen AI) |
 | [`zenodo`](https://github.com/vlln/bio-skills) | Search, download, and manage authenticated Zenodo deposits via the Zenodo API |
@@ -43,7 +43,7 @@ skit install skills-source/<skill-name>
 
 | Skill | Description |
 |---|---|
-| [`clashctl-usage`](https://github.com/vlln/clashskill) | 使用 clashctl 工具管理 Linux 代理 — 代理开关、节点切换、订阅管理、规则配置、网络诊断 |
+| [`clashctl-usage`](https://github.com/vlln/clashskill) | Manage Linux proxy agents with clashctl — proxy switching, node selection, subscription management, rule configuration, network diagnostics |
 | [`image-mirror-skill`](https://github.com/vlln/mip) | Accelerate Docker/OCI image pulls with registry-aware mirror rewrite via mip CLI |
 | [`quay`](https://github.com/vlln/quay-skill) | Search Quay.io repositories, list image tags, resolve pullable container references |
 | [`remote-exec`](https://github.com/vlln/remote-exec-skill) | Run repeated shell commands on remote machines over SSH with tmux-backed persistent state |

@@ -31,7 +31,7 @@
     },
     "bio-reproducer": {
       "name": "bio-reproducer",
-      "description": "引导 agent 通过分阶段报告、数据清单、异步长时间任务、Nextflow 编排和验证，在项目工作区内完成可复现的生物信息学论文复现。",
+      "description": "Guide agents through reproducible bioinformatics paper reproduction with phased reports, Nextflow orchestration, and validation.",
       "source": {
         "type": "github",
         "locator": "vlln/bio-skills",
@@ -59,7 +59,7 @@
     },
     "clashctl-usage": {
       "name": "clashctl-usage",
-      "description": "当用户需要了解或使用 clashctl 工具管理 Linux 代理时使用此 skill。覆盖代理开关、节点切换、订阅管理、规则配置和网络诊断等场景。",
+      "description": "Manage Linux proxy agents with clashctl — proxy switching, node selection, subscription management, rule configuration, and network diagnostics.",
       "source": {
         "type": "github",
         "locator": "vlln/clashskill",
